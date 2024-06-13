@@ -1,0 +1,59 @@
+header
+    left: 50%
+    transform: translateX(-50%)
+    position: fixed
+    z-index: 10 // Обсудить фиксед
+    .menu__wrapper
+        padding-top: 20px
+        display: grid
+        grid-template-columns: 70px 690px 70px
+        grid-template-rows: 66px
+        justify-content: center
+        column-gap: 30px
+        .menu__lang
+            display: flex
+            justify-content: center
+            align-items: center
+            flex-direction: column
+            background-color: #000000
+            border-radius: 20px
+            select
+                background: none
+                color: #FFF
+                border: none
+        .menu__list
+            display: flex
+            justify-content: space-between
+            padding: 0 30px
+            align-items: center
+            background-color: #000000
+            height: 100%
+            border-radius: 20px
+            list-style: none
+            .menu__btn
+                color: #FFF
+                font-size: 24px
+                text-transform: uppercase
+                background-image: linear-gradient(#FFF, #FFF)
+                background-position: 0% 100%
+                background-repeat: no-repeat
+                background-size: 0% 2px
+                border-radius: 1px
+                transition: all .5s ease-out
+                &:hover
+                    background-size: 100% 2px
+                    text-decoration: none
+        .menu__theme
+            display: flex
+            justify-content: center
+            align-items: center
+            background-color: #000000
+            border-radius: 20px
+            .theme__img
+                opacity: 0
+                position: absolute
+                transition: all .3s ease
+                &-active
+                    opacity: 1
+            img
+                cursor: pointer

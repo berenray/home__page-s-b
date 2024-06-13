@@ -1,0 +1,37 @@
+.about
+    padding-top: 82px
+    &__wrapper
+        display: grid
+        grid-template-columns: 460px 370px
+        justify-content: center
+        column-gap: 70px
+    &__text-tittle
+        font-size: 42px
+        color: #FFF
+    &__text-desc
+        font-size: 28px
+        color: #FFF
+    &__btn-item
+        text-align: center
+        width: 300px
+        color: #000000
+        transition: all 0.3s ease
+        border-radius: 10px
+        font-size: 29px
+        display: block
+        margin-left: 30px
+        &:hover
+            text-decoration: none
+            border-radius: 10px
+            background-color: #fff
+            -webkit-transform: scale(1.2)
+            -ms-transform: scale(1.2)
+            transform: scale(1.2)
+            color:#000000
+    &__slider
+        .slider__item
+            position: absolute
+            opacity: 0
+            transition: all .5s ease-out
+            &-active
+                opacity: 1
