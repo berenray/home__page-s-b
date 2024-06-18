@@ -13,17 +13,64 @@
     <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Itim&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">    
     <link rel="stylesheet" href="/css/animate.css">
     <link rel="stylesheet" href="./css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="./css/style.min.css">
 </head>
 <body>  
+    <div class="menu-side">
+        <div class="menu__close">
+            <svg width="29" height="30" viewBox="0 0 29 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.1568 14.5231L28.4489 3.23075C29.1837 2.49623 29.1837 1.30861 28.4489 0.574085C27.7144 -0.160437 26.5267 -0.160437 25.7922 0.574085L14.4998 11.8665L3.20781 0.574085C2.47295 -0.160437 1.28567 -0.160437 0.551149 0.574085C-0.183716 1.30861 -0.183716 2.49623 0.551149 3.23075L11.8432 14.5231L0.551149 25.8155C-0.183716 26.55 -0.183716 27.7376 0.551149 28.4721C0.917206 28.8385 1.39852 29.0226 1.87948 29.0226C2.36045 29.0226 2.84141 28.8385 3.20781 28.4721L14.4998 17.1798L25.7922 28.4721C26.1586 28.8385 26.6396 29.0226 27.1205 29.0226C27.6015 29.0226 28.0825 28.8385 28.4489 28.4721C29.1837 27.7376 29.1837 26.55 28.4489 25.8155L17.1568 14.5231Z" fill="black"/>
+            </svg>
+        </div>
+        <div class="menu__block">
+            <div class="menu__lang-side">
+                <img src="./icons/EN.svg" alt="" class="lang__en">
+                <img src="./icons/ukraine_lang.svg" alt="" class="lang__ua">
+                <select class="menu__lang-change">
+                    <option value="en">EN</option>  
+                    <option value="ua">UA</option>
+                </select>
+            </div>
+            <div class="menu__theme-side">
+                <img src="./icons/theme__lite.svg" alt="lite" class="theme__img theme__img-active">
+                <img src="./icons/Moon.svg" alt="dark" class="theme__img">
+            </div>
+            <nav>
+                <ul class="menu__list-side">
+                    <li class="menu__item-side">
+                        <a href="#" class="menu__btn-side lang-home">Home</a>
+                    </li>
+                    <li class="menu__item-side">
+                        <a href="#about" class="menu__btn-side lang-about">About me</a>
+                    </li>
+                    <li class="menu__item-side">
+                        <a href="#portfolio" class="menu__btn-side lang-portfolio">Portfolio</a>
+                    </li>
+                    <li class="menu__item-side">
+                        <a href="#" class="menu__btn-side lang-prices">Prices</a>
+                    </li>
+                    <li class="menu__item-side">
+                        <a href="#contacts" class="menu__btn-side lang-contacts">Contacts</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="menu__overlay"></div>
+    </div>
+    <div class="hamburger hamburger-active">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
     <header class="heaader">
         <nav>
             <div class="menu__wrapper">
                 <div class="menu__lang">
-                    <img src="./icons/EN.svg" alt="">
+                    <img src="./icons/EN.svg" alt="" class="lang__en">
+                    <img src="./icons/ukraine_lang.svg" alt="" class="lang__ua">
                     <select class="menu__lang-change">
                         <option value="en">EN</option>  
                         <option value="ua">UA</option>
@@ -31,24 +78,24 @@
                 </div>
                 <ul class="menu__list">
                     <li class="menu__item">
-                        <a href="#" class="menu__btn">Home</a>
+                        <a href="#" class="menu__btn lang-home">Home</a>
                     </li>
                     <li class="menu__item">
-                        <a href="#about" class="menu__btn">About me</a>
+                        <a href="#about" class="menu__btn lang-about">About me</a>
                     </li>
                     <li class="menu__item">
-                        <a href="#portfolio" class="menu__btn">Portfolio</a>
+                        <a href="#portfolio" class="menu__btn lang-portfolio">Portfolio</a>
                     </li>
                     <li class="menu__item">
-                        <a href="#" class="menu__btn">Prices</a>
+                        <a href="#" class="menu__btn lang-prices">Prices</a>
                     </li>
                     <li class="menu__item">
-                        <a href="#contacts" class="menu__btn">Contacts</a>
+                        <a href="#contacts" class="menu__btn lang-contacts">Contacts</a>
                     </li>
                 </ul>
                 <div class="menu__theme">
-                    <img src="./icons/theme__lite.svg" alt="lite" class="theme__img">
-                    <img src="./icons/Moon.svg" alt="dark" class="theme__img theme__img-active">
+                    <img src="./icons/theme__lite.svg" alt="lite" class="theme__img theme__img-active">
+                    <img src="./icons/Moon.svg" alt="dark" class="theme__img">
                 </div>
             </div>
         </nav>
@@ -59,9 +106,9 @@
                 <div class="promo__logo">
                     <img src="./icons/logo.png" alt="logo">
                 </div>
-                <div class="promo__text">
+                <div class="promo__text lang-promo">
                     I am Svitlana Berdii, an English tutor, Montessori teacher, trainer and neo educator. Also I am writer, founder of Montessori nursery. And I am just a soul who is exploring the world by planting goodness around people
-                    <span class="promo__text-desc">“Soyez realistes, demandez l' impossible"</span>
+                    <span class="promo__text-desc lang-promo__desc">“Soyez realistes, demandez l' impossible"</span>
                 </div>
             </div>
         </div>
@@ -70,14 +117,14 @@
         <div class="container">
             <div class="about__wrapper">
                 <div class="about__text">
-                    <div class="about__text-tittle">
+                    <div class="about__text-tittle lang-about__tittle">
                         Hey!
                     </div>
-                    <div class="about__text-desc">
+                    <div class="about__text-desc lang-about__desc">
                         ”Be realistic, demand the impossible" Ernest Che Guevaro words, but they express me better than any others. All my life I set impossible goals and work hard to achieve them. From my childhood I have been studying and developing myself. Not only in (teaching) educational sphere but also in spiritual psychology. I know there is the connection between inner and material world.
                     </div>
                     <div class="about__btn-more">
-                <a href="https://www.instagram.com/svetlanaberdii?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="about__btn-item">
+                        <a href="https://www.instagram.com/svetlanaberdii?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="about__btn-item lang-about__btn">
                             To see and read more...
                         </a>
                     </div>
@@ -98,7 +145,7 @@
     </section>
     <section class="projects" id="portfolio">
         <div class="container">
-            <div class="projects__tittle">
+            <div class="projects__tittle lang-projects__tittle">
                 My projects
             </div>
             <div class="projects__btns">
@@ -119,31 +166,31 @@
                         <div class="projects__card-tittle">
                             Montessori Courses
                         </div>
-                        <div class="projects__card-descr">
+                        <div class="projects__card-descr lang-montessori__courses">
                             You can choose the best course for you, for your requirements to fulfile an ummet need
                         </div>
                         <a href="##" class="projects__card-btn">More</a>
                     </div>
                 </div>
-                <div class="projects__card projects__card-first animate__animated animate__fadeInUp wow" data-wow-delay="0.2s">
+                <div class="projects__card projects__card-nursery projects__card-first animate__animated animate__fadeInUp wow" data-wow-delay="0.2s">
                     <img src="./img/projects/Nursery.png" alt="">
                     <div class="projects__card-content">
                         <div class="projects__card-tittle">
                             Montessori Nursery
                         </div>
-                        <div class="projects__card-descr">
+                        <div class="projects__card-descr lang-montessori__nursery">
                             Is not an usual nursery, it's a part of me. Our childcare program is focused on your childs growth and development
                         </div>
                         <a href="##" class="projects__card-btn">More</a>
                     </div>
                 </div>
-                <div class="projects__card projects__card-first projects__card-last animate__animated animate__fadeInUp wow" data-wow-delay="0.3s">
+                <div class="projects__card projects__card-animation projects__card-first projects__card-last animate__animated animate__fadeInUp wow" data-wow-delay="0.3s">
                     <img src="./img/projects/Trips.png" alt="">
                     <div class="projects__card-content">
                         <div class="projects__card-tittle">
                             Montessori Trips
                         </div>
-                        <div class="projects__card-descr">
+                        <div class="projects__card-descr lang-montessori__trips">
                             I organise trips around Montessori schools in Warsaw. So, then you can dive in Montessori world and feel it inside.
                         </div>
                         <a href="##" class="projects__card-btn">More</a>
@@ -157,19 +204,19 @@
                         <div class="projects__card-tittle">
                             English camps
                         </div>
-                        <div class="projects__card-descr">
+                        <div class="projects__card-descr lang-english__camps">
                             Education is not only studying at school with books. It's also travelling and learning something new around the world
                         </div>
                         <a href="##" class="projects__card-btn">More</a>
                     </div>
                 </div>
-                <div class="projects__card projects__card-second opacity">
+                <div class="projects__card projects__card-certificates projects__card-second opacity">
                     <img src="./img/projects/CERTIFICATES.png" alt="">
                     <div class="projects__card-content">
                         <div class="projects__card-tittle">
                             English certificates
                         </div>
-                        <div class="projects__card-descr">
+                        <div class="projects__card-descr lang-english__certificates">
                             International certificate will make your life easier because on this planet it's impossible to live without provment of your level
                         </div>
                         <a href="##" class="projects__card-btn">More</a>
@@ -181,21 +228,21 @@
                         <div class="projects__card-tittle">
                             English for everyone
                         </div>
-                        <div class="projects__card-descr">
+                        <div class="projects__card-descr lang-english__everyone">
                             English for kids, teens and adults in a shape of real life comunication or online
                         </div>
                         <a href="##" class="projects__card-btn">More</a>
                     </div>
                 </div>
             </div>
-            <div class="projects__filter-wrapper">
+            <div class="projects__filter-wrapper projects__filter-wrapper-last">
                 <div class="projects__card projects__card-third opacity">
                     <img src="./img/projects/Fairy-tales.png" alt="courses__img">
                     <div class="projects__card-content">
                         <div class="projects__card-tittle">
                             Fairy-tales
                         </div>
-                        <div class="projects__card-descr">
+                        <div class="projects__card-descr lang-fairy-tales">
                             These stories contain wise sense inside and transmit vital information
                         </div>
                         <a href="##" class="projects__card-btn">More</a>
@@ -207,7 +254,7 @@
                         <div class="projects__card-tittle">
                             Novels
                         </div>
-                        <div class="projects__card-descr">
+                        <div class="projects__card-descr lang-novels">
                             Here you can dive into the world of women through my novel."The journey of lifetime or thank you..."
                         </div>
                         <a href="##" class="projects__card-btn">More</a>
@@ -226,12 +273,9 @@
             </div>
             <div class="message__form">
                 <form class="uniForm menu_animation_before">
-
-                    <!-- Hidden Required Fields -->
                     <input type="hidden" name="project_name" value="SvitlanaBerdii">
                     <input type="hidden" name="admin_email" value="berdiy9@gmail.com">
                     <input type="hidden" name="form_subject" value="Contact form home page">
-                    <!-- END Hidden Required Fields -->
             
                     <input class="e-mail" type="text" name="E-mail" placeholder="E-mail" required><br>
                 
@@ -249,13 +293,13 @@
     </section>
     <section class="contacts" id="contacts">
         <div class="container">
-            <div class="contacts__tittle">
+            <div class="contacts__tittle lang-contacts__tittle">
                 Contacts information
             </div>
             <div class="contacts__wrapper">
                 <div class="contacts__text">
                     <div class="contacts__phone">
-                        <div class="phone__tittle">
+                        <div class="phone__tittle lang-contacts__phone">
                             Phones:
                         </div>
                         <div class="phone__numbers">
@@ -270,7 +314,7 @@
                         </div>
                     </div>
                     <div class="contacts__address">
-                        <div class="address__tittle">
+                        <div class="address__tittle lang-contacts__address">
                             Montessori address:
                         </div>
                         <div class="address__address">
@@ -288,6 +332,7 @@
         </div>
     </section>
 
+    <script src="./js/language.js"></script>
     <script src="./js/wow.min.js"></script>
     <script src="./js/bundle.js"></script>
 </body>

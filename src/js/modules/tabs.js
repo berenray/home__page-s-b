@@ -42,7 +42,7 @@ function tabs () {
         tabsCardFirst.forEach(item => {
             item.classList.remove('opacity-1', 'animate__animated','animate__fadeInUp');
             item.classList.add('opacity');
-            const last = item.classList.contains('projects__card-last')
+            const last = document.querySelector('projects__card-animation')
             if(last){
                 last.classList.remove('wow')
             }

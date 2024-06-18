@@ -15,6 +15,60 @@ module.exports = animate
 
 /***/ }),
 
+/***/ "./src/js/modules/menu.js":
+/*!********************************!*\
+  !*** ./src/js/modules/menu.js ***!
+  \********************************/
+/***/ ((module) => {
+
+function menu () {
+    const menu = document.querySelector('.menu-side'),
+        hamburger = document.querySelector('.hamburger'),
+        close = document.querySelector('.menu__close'),
+        overlay = document.querySelector('.menu__overlay');
+
+    function closeMenu () {
+        menu.classList.remove('active');
+        hamburger.classList.add('hamburger-active');
+        close.classList.remove('menu__close-active');
+        document.body.style.overflow = '';
+        overlay.style.display = 'none'
+    }
+
+    function openMenu () {
+        menu.classList.add('active');
+        hamburger.classList.remove('hamburger-active');
+        close.classList.add('menu__close-active');
+        document.body.style.overflow = 'hidden';
+        overlay.style.display = 'block';
+    }
+
+    close.addEventListener('click', ()=> {
+        closeMenu();
+    })
+
+    hamburger.addEventListener('click', ()=> {
+       openMenu(); 
+    });
+
+    document.addEventListener('keydown', (e)=> {
+        if(e.code == 'Escape' && menu.classList.contains('active') && overlay.style.display == 'block') {
+            e.preventDefault();
+            closeMenu();
+        }
+    })
+
+    overlay.addEventListener('click', (e)=> {
+        if(e.target == overlay) {
+            closeMenu();
+        }
+    })
+}
+
+module.exports = menu
+
+/***/ }),
+
 /***/ "./src/js/modules/slider.js":
 /*!**********************************!*\
   !*** ./src/js/modules/slider.js ***!
@@ -90,7 +144,7 @@ function tabs () {
         tabsCardFirst.forEach(item => {
             item.classList.remove('opacity-1', 'animate__animated','animate__fadeInUp');
             item.classList.add('opacity');
-            const last = item.classList.contains('projects__card-last')
+            const last = document.querySelector('projects__card-animation')
             if(last){
                 last.classList.remove('wow')
             }
@@ -167,57 +221,6 @@ function tabs () {
 
 module.exports = tabs
 
-/***/ }),
-
-/***/ "./src/js/modules/theme.js":
-/*!*********************************!*\
-  !*** ./src/js/modules/theme.js ***!
-  \*********************************/
-/***/ ((module) => {
-
-function theme() {
-    const button = document.querySelector('.menu__theme'),
-        body = document.querySelector('body'),
-        img = document.querySelectorAll('.theme__img'),
-        savedClass = localStorage.getItem('bodyClass'),
-        socialInst = document.querySelector('.social__inst'),
-        socialTelegram = document.querySelector('.social__telegram'),
-        socialWhatsapp = document.querySelector('.social__whatsapp'),
-        socialYoutube = document.querySelector('.social__youtube');
-
-    if(savedClass) {
-        document.body.classList.add(savedClass);
-        iconsSaved(savedClass);
-    }
-
-    button.addEventListener('click', ()=> {
-        body.classList.toggle('dark');
-        img.forEach(item =>{
-            item.classList.toggle('theme__img-active')
-        })
-        const currentClass = body.className;
-        localStorage.setItem('bodyClass', currentClass);
-        iconsSaved(currentClass);
-    })
-
-    function iconsSaved(theme) {
-        if(theme == 'dark') {
-            socialInst.src = './icons/inst.png';
-            socialTelegram.src = './icons/telegram.png';
-            socialWhatsapp.src = './icons/whatsapp.png';
-            socialYoutube.src = './icons/youtube.png';
-        } else{
-            socialInst.src = './icons/inst.svg';
-            socialTelegram.src = './icons/telegram.svg';
-            socialWhatsapp.src = './icons/whatsapp.svg';
-            socialYoutube.src = './icons/youtube.svg';
-        }
-    }   
-}
-
-module.exports = theme
-
-
 /***/ })
 
 /******/ 	});
@@ -257,15 +260,19 @@ var __webpack_exports__ = {};
 
 
 window.addEventListener('DOMContentLoaded', ()=> {
-    const theme = __webpack_require__(/*! ./modules/theme */ "./src/js/modules/theme.js"),
+    // const theme = require('./modules/theme'),
+    //     translate = require('./modules/translate'),
+    const menu = __webpack_require__(/*! ./modules/menu */ "./src/js/modules/menu.js"),
         slider = __webpack_require__(/*! ./modules/slider */ "./src/js/modules/slider.js"),
         tabs = __webpack_require__(/*! ./modules/tabs */ "./src/js/modules/tabs.js"),
         animate = __webpack_require__(/*! ./modules/animate */ "./src/js/modules/animate.js");
 
-    theme();
+    // theme();
     slider();
     tabs();
     animate();
+    // translate();
+    menu();
 })
 })();
 

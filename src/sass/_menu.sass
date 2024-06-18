@@ -1,0 +1,101 @@
+.menu-side
+    position: fixed
+    top: 0
+    left: -100%
+    width: 100%
+    height: 100vh
+    z-index: 10
+    visibility: hidden
+    opacity: 0
+    transition: all .6s
+    &.active
+        left: 0
+        visibility: visible
+        opacity: 1
+    .menu__block
+        width: 300px
+        background-color:  #000000
+        height: 100%
+        transition: all .6s
+        padding-top: 140px
+        z-index: 10
+        -webkit-box-shadow: 31px 0px 50px 0px rgba(0, 0, 0, 1)
+        -moz-box-shadow: 31px 0px 50px 0px rgba(0, 0, 0, 1)
+        box-shadow: 31px 0px 50px 0px rgba(0, 0, 0, 1)
+        position: relative
+    .menu__overlay
+        display: none
+        position: fixed
+        width: 100%
+        height: 100%
+        top: 0
+    .menu__close
+        position: absolute
+        top: 19px
+        cursor: pointer
+        right: 15px
+        display: none
+        z-index: 10
+        &-active
+            display: block
+    .menu__list-side
+        list-style: none
+        display: flex
+        flex-direction: column
+        align-items: center
+        margin-top: 50px
+    .menu__item-side
+        font-weight: bold
+        font-size: 34px
+        line-height: 36px
+        color: #fff
+        text-transform: uppercase
+        margin-bottom: 15px
+        position: relative
+        padding-bottom: 20px
+        a
+            text-decoration: none
+            color: #FFF
+    .menu__lang-side
+            display: flex
+            justify-content: center
+            align-items: center
+            flex-direction: column
+            background-color: #000000
+            border-radius: 20px
+            position: absolute
+            top: 10px
+            left: 30%
+            img
+                transition: all .5s ease
+                position: absolute
+                top: 10px
+                width: 40px
+            // .lang__en
+            //     opacity: 0
+            .lang__ua
+                opacity: 0
+            select
+                background: none
+                color: #FFF
+                border: none
+                margin-top: 35px
+                font-size: 30px
+    .menu__theme-side
+            display: flex
+            justify-content: center
+            align-items: center
+            background-color: #000000
+            border-radius: 20px
+            .theme__img
+                opacity: 0
+                position: absolute
+                top: 20px
+                left: 55%
+                transition: all .3s ease
+                &-active
+                    opacity: 1
+            img
+                width: 50px
+    .menu__overlay
+        display: none

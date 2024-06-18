@@ -1,0 +1,220 @@
+@media (max-width: 1200px)
+    .container
+        max-width: 960px
+    .promo__wrapper
+        grid-template-columns: 300px 500px
+    .promo
+        &__text-desc
+            right: 0px
+@media (max-width: 992px)
+    .container
+        max-width: 720px
+    header
+        .menu__wrapper
+            grid-template-columns: 60px 600px 60px
+            column-gap: 20px
+            grid-template-rows: 56px
+            .menu__list
+                .menu__btn
+                    font-size: 22px
+    .promo
+        &__wrapper
+            grid-template-columns: 250px 450px
+            column-gap: 20px
+        &__logo
+            img
+                width: 250px
+        &__text
+            font-size: 30px
+        &__text-desc
+            right: 5px
+            font-size: 30px
+    .about
+        &__wrapper
+            grid-template-columns: 320px 330px
+            column-gap: 40px
+        &__text-desc
+            font-size: 24px
+        &__slider
+            .slider__item
+                width: 330px
+                margin-top: 50px
+                img
+                    width: 330px
+    .projects
+        &__filter-wrapper
+            grid-template-columns: repeat(2, 330px)
+            column-gap: 35px
+            img
+                width: 330px
+    .message
+        &__tittle-text
+            font-size: 48px
+    .contacts
+        &__wrapper
+            grid-template-columns: 400px 350px
+@media (max-width: 768px)
+    .container
+        max-width: 540px
+    header
+        display: none
+    .promo
+        &__wrapper
+            grid-template-columns: 450px
+            row-gap: 30px
+        &__logo
+            margin: 0 auto
+            img
+                width: 200px
+        &__text
+            font-size: 25px
+            line-height: 30px
+            padding-bottom: 20px
+        &__text-desc
+            right: 10px
+    .hamburger
+        &-active
+            span
+                display: block
+    .menu-side   
+        .menu__close
+            display: block
+    .about
+        padding-top: 30px
+        &__wrapper
+            grid-template-columns: 350px
+            grid-template-rows: 480px 570px
+        &__slider
+            grid-row: 1 / 2
+            position: relative
+            .slider__item
+                position: absolute
+                left: 30px
+                bottom: 10px
+                margin-top: 0
+                width: 300px
+    .projects
+        &__filter-wrapper
+            grid-template-columns: repeat(2, 270px)
+            column-gap: 15px
+            row-gap: 15px
+            img
+                width: 270px
+        &__btns
+            margin-left: 30px
+    .message
+        &__tittle-text
+            font-size: 36px
+        &__form
+            margin-top: 100px
+            .e-mail
+                font-size: 36px
+    .contacts
+        padding-bottom: 20px
+        &__wrapper
+            grid-template-columns: 400px
+            grid-template-rows: 170px 150px 150px
+        &__social
+            grid-column: 1
+            grid-row: 3
+            margin: 50px auto 0 auto
+        &__address
+            margin-top: 0
+@media (max-width: 576px)
+    .container
+        width: 100%
+    .promo
+        &__wrapper
+            padding-top: 35px
+            grid-template-columns: 300px
+        &__logo
+            img
+                width: 180px
+        &__text
+            font-size: 25px
+            padding: 5px 10px 25px 10px
+            line-height: 25px
+        &__text-desc
+            font-size: 22px
+            right: 20px
+    .menu-side
+        .menu__block
+            width: 220px
+        .menu__item-side
+            font-size: 24px
+            padding-bottom: 10px
+        .menu__lang-side
+            left: 25%
+            img
+                width: 30px
+            select
+                font-size: 24px
+    .about
+        &__wrapper
+            grid-template-columns: 300px
+            grid-template-rows: 370px 650px
+        &__btn-item
+            width: 250px
+            font-size: 24px
+        &__slider
+            .slider__item
+                width: 250px
+    .projects
+        &__tittle
+            font-size: 36px
+        &__btns
+            flex-wrap: wrap
+            max-width: 300px
+            margin-top: 20px
+            margin: 20px auto
+            .projects__filter-btn
+                display: block
+                &:first-child
+                    margin-right: 0
+                &:last-child
+                    margin-right: 0
+            .projects__filter-text
+                font-size: 23px
+                &:first-child
+                    margin-bottom: 20px
+        &__filter-wrapper
+            grid-template-columns: 250px
+            column-gap: 0
+            grid-template-rows: repeat(3, 365px)
+            margin-top: 20px
+            row-gap: 30px
+            &-last
+                grid-template-rows: repeat(2, 365px)
+            img
+                width: 250px
+            .projects__card-nursery
+                grid-row: 2 / 3
+            .projects__card-certificates
+                grid-row: 2 /3
+            .projects__card
+                &-last
+    .message
+        &__tittle-text
+            font-size: 26px
+        &__tittle-text-second
+            margin-left: 35px
+        &__form
+            .e-mail
+                font-size: 36px
+                max-width: 300px
+    .contacts
+        &__wrapper
+            margin-top: 30px
+            grid-template-columns: 300px
+        &__phone
+            .phone__tittle
+                font-size: 36px
+            .number
+                font-size: 30px
+        &__address
+            font-size: 35px
+        .phone__polish
+            margin-bottom: 10px
+        &__social
+            .icons__social
+                margin-right: 10px
