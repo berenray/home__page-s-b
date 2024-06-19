@@ -2,7 +2,8 @@ function menu () {
     const menu = document.querySelector('.menu-side'),
         hamburger = document.querySelector('.hamburger'),
         close = document.querySelector('.menu__close'),
-        overlay = document.querySelector('.menu__overlay');
+        overlay = document.querySelector('.menu__overlay'),
+        btn = document.querySelectorAll('.menu__btn-side');
 
     function closeMenu () {
         menu.classList.remove('active');
@@ -40,6 +41,11 @@ function menu () {
             closeMenu();
         }
     })
-}
 
-module.exports = menu
+    btn.forEach(item => {
+        item.addEventListener('click', ()=> {
+            closeMenu();
+        })
+    })
+}
+module.exports =  menu

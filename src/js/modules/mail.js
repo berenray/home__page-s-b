@@ -1,7 +1,8 @@
 function mail () {
     const mailPath = 'mail.php',
     modal = document.querySelector('.modal'),
-    modalDialog = document.querySelector('.modal__dialog');
+    modalDialog = document.querySelector('.modal__dialog'),
+    modalClose = document.querySelector('.modal__close svg');
 
     function opanThanksModal() {
         modal.style.display = 'flex';
@@ -10,14 +11,13 @@ function mail () {
         setTimeout (()=> {
             modal.style.display = 'none';
             document.body.style.overflow = '';
-        }, 15000)
+        }, 1500)
     }
 
     function closeModalThanks () {
         modal.style.display = 'none';
         document.body.style.overflow = '';
     }
-
 
     document.querySelectorAll('.uniForm').forEach( (e) => {
 
@@ -34,6 +34,7 @@ function mail () {
             if (this.readyState == 4 && this.status == 200) {
                 opanThanksModal();
                 th.reset();
+                console.log('hi');
             }
         }
         e.preventDefault();
@@ -41,16 +42,20 @@ function mail () {
         });
 
         modal.addEventListener('click', (event)=> {
-            if(event.target == modal || event.target.getAttribute('data-close') == '') {
+            if(event.target == modal || event.target == modalClose) {
+                closeModalThanks();
+            }
+        });
+
+        document.addEventListener('keydown', (e)=> {
+            if(e.code === 'Escape' && modal.style.display == 'flex') {
                 closeModalThanks();
             }
         })
 
-        document.addEventListener('keydown', (event)=> {
-            if(event.code === 'Escape' && modal.style.display == 'flex') {
-                closeModalThanks();
-            }
-        })
+        // modalClose.addEventListener('click', ()=> {
+        //     closeModalThanks();
+        // })
 
     });
 }

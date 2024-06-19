@@ -19,6 +19,26 @@ const langArr = {
         'en': 'contacts',
         'ua': 'контакти',
     },
+    'home-side': {
+        'en': 'home',
+        'ua': 'головна'
+    },
+    'about-side': {
+        'en': 'about me',
+        'ua': 'про мене',
+    },
+    'portfolio-side': {
+        'en': 'portfolio',
+        'ua': 'портфоліо',
+    },
+    'prices-side': {
+        'en': 'prices',
+        'ua': 'ціни',
+    },
+    'contacts-side': {
+        'en': 'contacts',
+        'ua': 'контакти',
+    },
     'promo': {
         'en': 'I am Svitlana Berdii, an English tutor, Montessori teacher, trainer and neo educator. Also I am writer, founder of Montessori nursery. And I am just a soul who is exploring the world by planting goodness around people',
         'ua': 'Я Світлана Бердій, репетитор англійської мови, Монтессорі-вчитель, тренер та неопедагог. Також я письменниця, засновниця дитячого садка Монтессорі. А також я душа, яка досліджує світ, росповсюджуючи добро навколо.',
@@ -82,5 +102,13 @@ const langArr = {
     'contacts__address': {
         'en': 'Montessori address:',
         'ua': 'Адресса монттесорі:',
+    },
+    'modal-first': {
+        'en': 'Thank you for your message',
+        'ua': 'Дякую за ваше повідомлення',
+    },
+    'modal-second': {
+        'en': 'I’ll connect with you soon',
+        'ua': "Невдовзі я з вами зв'яжусь",
     },
 }
