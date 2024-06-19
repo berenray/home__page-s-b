@@ -7,7 +7,9 @@ function theme() {
         socialTelegram = document.querySelector('.social__telegram'),
         socialWhatsapp = document.querySelector('.social__whatsapp'),
         socialYoutube = document.querySelector('.social__youtube'),
-        { closeMenu } = require('./menu');
+        hamburger = document.querySelectorAll('.hamburger span'),
+        close = document.querySelector('.menu__close svg path'),
+        modal = document.querySelector('.modal');
 
     if(savedClass) {
         document.body.classList.add(savedClass);
@@ -20,6 +22,7 @@ function theme() {
             img.forEach(item =>{
                 item.classList.toggle('theme__img-active')
             })
+            modal.classList.toggle('modal-active')
             const currentClass = body.className;
             localStorage.setItem('bodyClass', currentClass);
             iconsSaved(currentClass);
@@ -32,7 +35,7 @@ function theme() {
                 hamburger.classList.add('hamburger-active');
                 close.classList.remove('menu__close-active');
                 document.body.style.overflow = '';
-                overlay.style.display = 'none'
+                overlay.style.display = 'none';
             }
             closeMenu();
         })
@@ -44,11 +47,19 @@ function theme() {
             socialTelegram.src = './icons/telegram.png';
             socialWhatsapp.src = './icons/whatsapp.png';
             socialYoutube.src = './icons/youtube.png';
+            hamburger.forEach(item => {
+                item.style.backgroundColor = 'black';
+            });
+            close.style.fill = 'black';
         } else{
             socialInst.src = './icons/inst.svg';
             socialTelegram.src = './icons/telegram.svg';
             socialWhatsapp.src = './icons/whatsapp.svg';
             socialYoutube.src = './icons/youtube.svg';
+            hamburger.forEach(item => {
+                item.style.backgroundColor = 'white';
+            });
+            close.style.fill = 'white';
         }
     }   
 }
