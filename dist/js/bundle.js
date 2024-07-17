@@ -147,6 +147,74 @@ module.exports =  menu
 
 /***/ }),
 
+/***/ "./src/js/modules/news.js":
+/*!********************************!*\
+  !*** ./src/js/modules/news.js ***!
+  \********************************/
+/***/ ((module) => {
+
+function news () {
+    const card = document.querySelectorAll('.news__card'),
+        cardText = document.querySelectorAll('.news__card-text');
+        maxVisibility = 3;
+    let currentIndex = 0,
+        intervalId;
+
+    function updateVisibility () {
+        card.forEach((item,i) => {
+            if(i < maxVisibility) {
+                item.style.display = 'block'
+            } else {
+                item.style.display = 'none'
+            }
+        })
+    }
+
+    updateVisibility();
+    
+    function openItem (index) {
+        card.forEach(item => {
+            item.classList.remove('news__card-active')
+        })
+        cardText.forEach(item => {
+            item.classList.remove('animate__animated');
+            item.classList.remove('animate__fadeInUp');
+        })
+        card[index].classList.add('news__card-active');
+        cardText[index].classList.add('animate__animated');
+        cardText[index].classList.add('animate__fadeInUp');
+    }
+
+    function resetInterval() {
+        clearInterval(intervalId);
+        intervalId = setInterval(switchNextItem, 20000)
+    }
+
+    card.forEach((item, index) => {
+        item.addEventListener('click', ()=> {
+            currentIndex = index;
+            openItem(index);
+            resetInterval();
+        })
+    })
+
+    function switchNextItem () {
+        currentIndex++;
+        if(currentIndex >= card.length) {
+            currentIndex = 0;
+        }
+        openItem(currentIndex);
+    }
+
+    openItem(currentIndex);
+
+    intervalId = setInterval(switchNextItem, 20000)
+}
+
+module.exports = news
+
+/***/ }),
+
 /***/ "./src/js/modules/slider.js":
 /*!**********************************!*\
   !*** ./src/js/modules/slider.js ***!
@@ -532,7 +600,8 @@ window.addEventListener('DOMContentLoaded', ()=> {
         animate = __webpack_require__(/*! ./modules/animate */ "./src/js/modules/animate.js"),
         theme = __webpack_require__(/*! ./modules/theme */ "./src/js/modules/theme.js"),
         translate = __webpack_require__(/*! ./modules/translate */ "./src/js/modules/translate.js"),
-        mail = __webpack_require__(/*! ./modules/mail */ "./src/js/modules/mail.js");
+        mail = __webpack_require__(/*! ./modules/mail */ "./src/js/modules/mail.js"),
+        news = __webpack_require__(/*! ./modules/news */ "./src/js/modules/news.js");
 
     mail();
     theme();
@@ -541,6 +610,7 @@ window.addEventListener('DOMContentLoaded', ()=> {
     animate();
     translate();
     menu();
+    news();
 })
 })();
 

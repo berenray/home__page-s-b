@@ -1,0 +1,75 @@
+.news 
+    padding: 100px 0px 30px 0px
+    &__title
+        text-align: center
+        text-transform: uppercase
+        font-size: 42px
+    &__cards-container
+        margin-top: 50px
+        display: flex
+        justify-content: center
+    &__card
+        width: 150px
+        margin-right: 20px
+        overflow: hidden
+        border-radius: 20px
+        transition: all .5s ease-in
+        &:last-child
+            margin-right: 0
+    .card__content
+        position: relative
+    &__card-img
+        border-radius: 20px
+        width: 370px
+        height: 540px
+        transition: all .5s ease-in
+    .card__text-content
+        position: absolute
+        bottom: 0
+        width: 100%
+    .card__text-container
+        position: relative
+    &__card-text
+        font-size: 20px
+        margin-bottom: 15px
+        display: none
+        text-align: left
+    &__card-overlay
+        background: rgba(35, 35, 35, .8)
+        width: 100%
+        padding: 20px 15px 20px 15px
+        border-bottom-left-radius: 20px 
+        border-bottom-right-radius: 20px 
+        border-top-right-radius: 20px
+        border-top-left-radius: 20px
+        text-align: center
+        height: 540px
+    &__card-btn
+        opacity: 0
+        padding: 7px 30px 
+        font-size: 28px
+        background-color: #000000
+        color: #FFF
+        border-radius: 5px
+        text-transform: uppercase
+        background-image: linear-gradient(to right, #FFF, #FFF)
+        background-repeat: no-repeat
+        background-size: 0 100%
+        &:hover
+            background-size: 100% 100%
+            color: #000000
+            transition: all .3s ease-out
+            text-decoration: none
+    &__card-active &__card-text
+        display: block
+    &__card-active &__card-btn
+        opacity: 1
+    &__card-active &__card-overlay
+        height: auto
+        border-top-right-radius: 0px
+        border-top-left-radius: 0px
+    &__card-active &__card-img
+        width: 370px
+        height: 540px
+    &__card-active
+        width: 370px

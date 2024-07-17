@@ -111,4 +111,8 @@ const langArr = {
         'en': 'I’ll connect with you soon',
         'ua': "Невдовзі я з вами зв'яжусь",
     },
+    'news-title': {
+        'en': 'Latest news',
+        'ua': 'Останні новини',
+    },
 }
