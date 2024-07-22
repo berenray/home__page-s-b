@@ -7,7 +7,8 @@ window.addEventListener('DOMContentLoaded', ()=> {
         animate = require('./modules/animate'),
         theme = require('./modules/theme'),
         translate = require('./modules/translate'),
-        mail = require('./modules/mail');
+        mail = require('./modules/mail'),
+        news = require('./modules/news');
 
     mail();
     theme();
@@ -16,4 +17,5 @@ window.addEventListener('DOMContentLoaded', ()=> {
     animate();
     translate();
     menu();
+    news();
 })
