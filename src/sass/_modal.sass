@@ -10,7 +10,9 @@
     overflow: hidden
     background-color: rgba(0, 0, 0, .5)
     &__dialog
-        position: relative
+        position: absolute
+        transform: translateY(-100%)
+        transition: all .5s ease
         padding: 40px
         background-color: #fff
         border: 1px solid rgba(0, 0, 0, .2)
@@ -51,3 +53,7 @@
                     fill: #fff
         .modal-text
             color: #FFF
+    &-translate
+        transform: translateY(0%)
+    &-close
+        transform: translateY(-150%)

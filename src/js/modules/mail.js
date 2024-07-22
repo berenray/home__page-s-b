@@ -5,18 +5,25 @@ function mail () {
     modalClose = document.querySelector('.modal__close svg');
 
     function opanThanksModal() {
-        modal.style.display = 'flex';
         document.body.style.overflow = 'hidden';
-        modalDialog.classList.add('fade-modal');
+        modal.style.display = 'flex';
+        modalDialog.classList.remove('modal-close');
+        setTimeout(()=> {
+            modalDialog.classList.add('modal-translate');
+        }, 1)
         setTimeout (()=> {
             modal.style.display = 'none';
             document.body.style.overflow = '';
-        }, 1500)
+        }, 15000)
     }
 
     function closeModalThanks () {
-        modal.style.display = 'none';
         document.body.style.overflow = '';
+        modalDialog.classList.remove('modal-translate');
+        modalDialog.classList.add('modal-close');
+        setTimeout(()=> {
+            modal.style.display = 'none';
+        }, 500)
     }
 
     document.querySelectorAll('.uniForm').forEach( (e) => {
